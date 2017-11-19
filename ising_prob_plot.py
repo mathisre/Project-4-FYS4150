@@ -6,6 +6,7 @@ plt.rcParams["savefig.directory"] = "/home/mathisre/Dropbox/Uni/Images/Proj4"
 
 file = open(argv[1], 'r')
 n = (file.readline().split())
+
 nspins = int(n[1])
 n = int(n[0])
 with file as filename:
@@ -28,7 +29,7 @@ plt.ylabel('Probability of state having energy E')
 plt.title('Probability of spin state having energy E for T = 2.4 for a 20x20 lattice')
 plt.grid(True)
 #plt.legend()
-plt.axis([-2,-1.95, 0, 1])
+plt.axis([-2,2, 0, 1])
 
 plt.show()
 

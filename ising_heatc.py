@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 plt.rcParams["savefig.directory"] = "/home/mathisre/Dropbox/Uni/Images/Proj4"
 
-file = open(argv[4], 'r')
+file = open(argv[1], 'r')
 param = (file.readline().split())
 nspins = int(param[1])
 n = int(param[0]) - 1 #Sometimes need to remove the -1

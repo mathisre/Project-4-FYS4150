@@ -9,8 +9,7 @@ ax.get_yaxis().get_major_formatter().set_useOffset(False)
 
 
 file = open(argv[1], 'r')
-n = int(float(file.readline())) -1 
-
+n = int(float(file.readline())) -1
 
 with file as filename:
     lines = [line.split() for line in filename]
@@ -24,7 +23,6 @@ for k in range(len(lines)): #read data into array
     expE[k] = float(lines[k][0])
     meanM[k] = float(lines[k][1])
     accepted[k] = float(lines[k][2])
-    E[k] = float(lines[k][3])
 
 file.close()
 
@@ -39,7 +37,7 @@ plt.ylabel('Energy in units of J')
 plt.title('Mean energy for T = 2.4 for initial ordered 20x20 lattice')
 #plt.legend(loc = 4)
 plt.grid(True)
-plt.axis([0,10**6, -1.26, -1.22])
+plt.axis([0,10**6, -2, -1])
 
 plt.show()
 
@@ -54,7 +52,7 @@ plt.ylabel('Mean magnetic moment')
 plt.title('Mean magnetic moment for T = 2.4 for initial ordered 20x20 lattice')
 plt.grid(True)
 #plt.legend(loc = 'best')
-plt.axis([0,10**6, 0.44, 0.5])
+plt.axis([0,10**6, 0, 1])
 
 plt.show()
 
@@ -69,10 +67,5 @@ plt.title('Accepted configurations for T = 2.4 for 20x20 lattice')
 plt.grid(True)
 plt.show()
 
-plt.plot(MCc, E)
-plt.xlabel('Monte Carlo cycles')
-plt.ylabel('Accepted configurations')
-plt.title('Accepted configurations for T = 2.4 in initial ordered 20x20 lattice')
-plt.grid(True)
-#plt.show()
+
 
