@@ -20,7 +20,7 @@ int periodic_bc(int x, int N, int plusorminus){
 int main(int argc, char* argv[])
 {
     string filename;
-    filename = argv[0];
+    filename = "ising_result.txt";
     ofile.open(filename);
     int numprocs;
     int myrank;
